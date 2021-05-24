@@ -40,7 +40,16 @@ import math
 #Taking a look at os
 #os , sys is used to the get information about localhost/your machine such as name, path, etc.
 
-import os, sys
+import os, sys, datetime
+#
+# print(os.cpu_count())
+# print(datetime.datetime.today())
+#
+# # % provides remainder value
+# print(math.remainder(1, 5))
+
+
+
 #
 # working_directory = os.getcwd()
 # print(f"You are in {working_directory}")
@@ -59,3 +68,5 @@ def current_directory():
     return os.getcwd()
 
 print(current_directory())
+
+print(math.pi)
