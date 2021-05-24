@@ -18,8 +18,8 @@
 
 #task:generate a number USING RANDOM. if the number inumber input is >= .50, apply ceil. if less than .50, apply floor()/
 
-from random import random
-import math
+# from random import random
+# import math
 
 # num1 = random()
 # print(num1)
@@ -56,17 +56,28 @@ import os, sys, datetime
 #
 # system_path = sys.path
 # print(f"This is the path{system_path}")
+#
+# def current_system_path():
+#     print(f"This is your current path:")
+#     return sys.path
+#
+# print(current_system_path())
+#
+# def current_directory():
+#     print("This is you working directory")
+#     return os.getcwd()
+#
+# print(current_directory())
+#
+# print(math.pi)
 
-def current_system_path():
-    print(f"This is your current path:")
-    return sys.path
+#lambda functions
+#These tyake in several values, and return a singular value.
+#They are defined using the syntax arguments : expression
+#For example:
 
-print(current_system_path())
+addition = lambda num1, num2 : num1 + num2
 
-def current_directory():
-    print("This is you working directory")
-    return os.getcwd()
-
-print(current_directory())
-
-print(math.pi)
+print(addition(1,2))
+#The above would return the two input arguments added together inside the print statement. This is similar to the add function previously defined in our calculator, for example.
+#These are commonly used in banking, for example, as there are built-in functionalities that allow some calculations
