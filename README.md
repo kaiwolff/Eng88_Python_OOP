@@ -2,15 +2,15 @@
 
 ### Packages
 
-Packages and modules are pre-made blocks of code that can be used to perfor a particular task without the need to add your own code. They can be simply imported using the ```import``` command. It is also possible to import individual functions using the command ```from [package] import [function]```. This has the advantage that the function can suimply be called by its name, rather than needing to specify the package name for every function call.
+Packages and modules are pre-made blocks of code that can be used to perform a particular task without the need to add your own code. They can be simply imported using the ```import``` command. It is also possible to import individual functions using the command ```from [package] import [function]```. This has the advantage that the function can suimply be called by its name, rather than needing to specify the package name for every function call.
 
 #### os and sys
 
-These tow packages are useful for doing system-related tasks, such as getting the current working directory (an obvious use case for this would be contructing a filepath for saving or retrieving files).
+These two packages are useful for doing system-related tasks, such as getting the current working directory (an obvious use case for this would be constructing a filepath for saving or retrieving files).
 
 ##### Math - Sample code discussion
 
-The ```math``` libvrary contains a large amount of functions and values commonly used in mathematics. These are commonly used to perform operations such as rounding.
+The ```math``` library contains a large amount of functions and values commonly used in mathematics. These are commonly used to perform operations such as rounding.
 
 An example of this is shown here:
 
@@ -55,7 +55,7 @@ This means hiding data internal to a class from a client or external user. Use u
 
 #### Polymorphism
 
-This is the philosophy of having many forms availalbe. This means you can overwrite methods from a parent class without changing the parent class. This means that if you had an employee class, you might write a different "pay" method depending on the way the emplyee was paid (e.g some are salaried, some hourly, some get bonuses, etc etc.)
+This is the philosophy of having many forms available. This means you can overwrite methods from a parent class without changing the parent class. This means that if you had an employee class, you might write a different "pay" method depending on the way the employee was paid (e.g some are salaried, some hourly, some get bonuses, etc etc.)
 
 
 #### In practice - Animal class and child classes
