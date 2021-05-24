@@ -21,10 +21,41 @@
 from random import random
 import math
 
-num1 = random()
-print(num1)
-if num1 >= 0.5:
-    print(math.ceil(num1))
-else:
-    print(math.floor(num1))
+# num1 = random()
+# print(num1)
+# if num1 >= 0.5:
+#     print(math.ceil(num1))
+# else:
+#     print(math.floor(num1))
+#
+#
+# random_number = random()
+# print("This is a randomly generated: " + str(random_number))
+# if random_number >= 0.5:
+#     print(f"This value was rounded up with math.ceil: {math.ceil(random_number)}")
+# else:
+#     print(math.floor(random_number))
+#     print(f"This value was rounded down with math.floor: {math.floor(random_number)}")
 
+#Taking a look at os
+#os , sys is used to the get information about localhost/your machine such as name, path, etc.
+
+import os, sys
+#
+# working_directory = os.getcwd()
+# print(f"You are in {working_directory}")
+#
+# system_path = sys.path
+# print(f"This is the path{system_path}")
+
+def current_system_path():
+    print(f"This is your current path:")
+    return sys.path
+
+print(current_system_path())
+
+def current_directory():
+    print("This is you working directory")
+    return os.getcwd()
+
+print(current_directory())
