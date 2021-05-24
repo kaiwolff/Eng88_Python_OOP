@@ -7,7 +7,7 @@ class Reptile(Animal):
     def __init__(self):
         #we have a keyword called super, which inherits everything from the parent class at the time of initialisation of the class.
         super().__init__()
-        self.coldblooded = True
+        self.cold_blooded = True
         self.tetrapod = None #set to none because not all reptiles are this type
         self.heart_chambers = [3,4]
 
@@ -24,7 +24,7 @@ class Reptile(Animal):
 
 reptile_object = Reptile()
 
-#notice that A Reptile object has access to all functions from the animal, as well as it's own functions.
-print(f"This function was inherited from the animal class by the reptile class: {reptile_object.eat()}")
-print(f"This function is from the reptile class: {reptile_object.seek_heat()}")
-# This is extremely powerful, and the primary benefit of using OOP.
+# #notice that A Reptile object has access to all functions from the animal, as well as it's own functions.
+# print(f"This function was inherited from the animal class by the reptile class: {reptile_object.eat()}")
+# print(f"This function is from the reptile class: {reptile_object.seek_heat()}")
+# # This is extremely powerful, and the primary benefit of using OOP.
