@@ -21,6 +21,12 @@ class FunctionalCalculator(SimpleCalculator):
 
 
 my_calc = FunctionalCalculator()
-print(my_calc.add(2,2))
-print(my_calc.divisible(2,3))
+print(my_calc.add(1,1))
+print(my_calc.subtract(1,1))
+print(my_calc.multiply(1,2))
 print(my_calc.divisible(4,2))
+print(my_calc.divisible(3,2))
+print(my_calc.divisible(3,0))
+print(my_calc.divide(4,2))
+print(my_calc.inchtocm(2))
+print(my_calc.triangle_area(2,2))
