@@ -14,7 +14,7 @@ The ```math``` library contains a large amount of functions and values commonly 
 
 An example of this is shown here:
 
-```
+```python
 
 from random import random
 import math
@@ -43,7 +43,7 @@ This type of function takes multiple arguments and returns a singular value. It 
 
 #### Abstraction
 
-Abstraction is the process of taking away characteristics to reduce something to an essential set of characteristics. User when modelling objects using classes and minimising the amount of information necessary for a user of a function to know in order to get usable software.
+Abstraction is the process of taking away characteristics to reduce something to an essential set of characteristics. When modelling objects using classes ,minimising the amount of information necessary for a user of a function to know in order to get usable software.
 
 #### Inheritance
 
@@ -62,7 +62,7 @@ This is the philosophy of having many forms available. This means you can overwr
 
 To demonstrate this, we create a quick class called Animal, containing a few typical features an animal might have:
 
-```
+```python
 
 #animal fil to create Animal class
 #Notice the convention. Classes are in CamelCase
@@ -97,3 +97,33 @@ class Animal:
 
 we can import this into another class, which we note as a child of the Animal class using the syntax ```ChildClass(ParentClass```. If we are writing in a separate file as we have done here, we also need to import the parent class we are basing our work on using, in this case, the command ```from animal import Animal```. We can also inherit further, with "grandchild" classes, which we have done in the other files. Notice that we can call all the way up the inheritance tree, even being able to call Animal methods in the snake class even though it is the "great-grandchild" of that class.
 
+Taking the example below, we see the great-grandchild of Animal, Python. An object of the python class can use methods from any of the predecessors, as the print statements show:
+
+```python
+from snake import Snake
+
+class Python(Snake):
+
+    def __init__(self):
+        super().__init__()
+        self.large = True
+        self.two_lungs = True
+        self.venom = False
+
+    def digest_large_prey(self):
+        return "yum yum yum, that was a big meal"
+
+    def climb(self):
+        return "Up we go"
+
+    def shed_skin(self):
+        return "Time to grow out of myself"
+
+
+my_python = Python()
+
+print(f"From Animal class: {my_python.breathe()}")
+print(f"From Reptile object: {my_python.seek_heat()}")
+print(f"From Snake class: {my_python.use_tongue_to_smell()}")
+print(f"From Python class: {my_python.digest_large_prey()}")
+```
