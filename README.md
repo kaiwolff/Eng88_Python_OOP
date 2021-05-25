@@ -127,3 +127,71 @@ print(f"From Reptile object: {my_python.seek_heat()}")
 print(f"From Snake class: {my_python.use_tongue_to_smell()}")
 print(f"From Python class: {my_python.digest_large_prey()}")
 ```
+
+
+## Simple Test Case - A Calculator in Two Parts
+
+This task is similar to the one done in Week 1, but to demonstrate the ability to inherit, it is split into two parts, a simple calculator (stored in oop_calculator), and a slightly mroe advanced calculator stored in functional_calculator.
+
+We start with the SimpleCalculator class:
+
+```python
+class SimpleCalculator:
+
+    def add(self, value1, value2):
+        return value1 + value2
+
+
+    def subtract(self, value1, value2):
+        return value1 - value2
+
+    def multiply(self, value1, value2):
+        return value1 * value2
+
+    def divide(self, value1, value2):
+        return value1 / value2
+```
+
+This contains four functions, for addition, subtraction, multiplication and division. If an objec tof SimpleCalculator is instantiated, the functions can be accessed, for example like below:
+
+```python
+calculator_object = SimpleCalculator()
+print(calculator_object.add(1,2))
+```
+
+We now want to add mroe functionality to the calculator, in this case a check whether two numbers are divisible, a converter for inches to centimetres, and a function to calculate the area of a triangle.
+
+To do this, we create a child class of SimpleCalculator, which I have called FunctionalCalculator:
+
+```python
+from oop_calculator import SimpleCalculator
+
+class FunctionalCalculator(SimpleCalculator):
+    #add mroe functionality compared to the simple calculator
+    def __init__(self):
+        super().__init__()
+
+    def inchtocm(self, value1):
+        return value1 * 2.54
+
+    def triangle_area(self, height, width):
+        return height*width/2
+
+    def divisible(self, value1, value2):
+        if value2 == 0:
+            return False
+        elif value1 % value2 == 0:
+            return True
+        else:
+            return False
+
+```
+
+The functions we have added are available only in FunctionalCalculator. However, the key thing is the below block of code:
+
+```python
+    def __init__(self):
+        super().__init__()
+```
+
+using the ```super().__init--()``` statement means we are telling the interpreter to set up the initial coinditions of our class in the same way as its parent class, or superclass. We can therefore access all of SimpleCalculator's functions, with the new functions being added on for our FunctionalCalculator class. This is what is known as inheritance, and a key aspect of OOP.
