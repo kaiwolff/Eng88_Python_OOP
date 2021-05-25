@@ -194,4 +194,4 @@ The functions we have added are available only in FunctionalCalculator. However,
         super().__init__()
 ```
 
-using the ```super().__init--()``` statement means we are telling the interpreter to set up the initial coinditions of our class in the same way as its parent class, or superclass. We can therefore access all of SimpleCalculator's functions, with the new functions being added on for our FunctionalCalculator class. This is what is known as inheritance, and a key aspect of OOP.
+using the ```super().__init__()``` statement means we are telling the interpreter to set up the initial coinditions of our class in the same way as its parent class, or superclass. We can therefore access all of SimpleCalculator's functions, with the new functions being added on for our FunctionalCalculator class. This is what is known as inheritance, and a key aspect of OOP.
